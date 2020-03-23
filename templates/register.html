@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+{% block content %}
+<!-- Heading Starts Here -->
+<div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Sign up</h1>
+          <p><a href="/">Home</a> / <span>Sign Up</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Heading Ends Here -->
+<div class="container">
+   
+    <form action="register" method="POST">
+            {% csrf_token %}
+        <div class="form-group">
+            <label>First name</label>
+            <input type="text" name="first_name" class="form-control" >
+        </div> <br>
+        <div class="form-group">
+                <label >Last name</label>
+                <input type="text" name="last_name" class="form-control" ">
+         </div> <br>
+        <div class="form-group">
+                <label >username</label>
+                <input type="text" name="username" class="form-control" >
+        </div> <br>
+         <div class="form-group">
+            <label >Email address</label>
+            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+        </div> <br>
+        <div class="form-group">
+        <label >Password</label>
+            <input type="password" name="password1" class="form-control">
+            </div><br>
+        <div class="form-group">
+                <label >Confirm Password</label>
+                <input type="password" name="password2" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

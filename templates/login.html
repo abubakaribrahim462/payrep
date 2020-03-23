@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% block content%}
+<!-- Heading Starts Here -->
+<div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Login</h1>
+          <p><a href="/">Home</a> / <span>Login</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Heading Ends Here -->
+
+        <form action="login" method="POST">
+                {% csrf_token %}
+    <br>          
+        <label>Username :</label>
+        <input type="text" name="username" class="form-control"><br>
+    <br>
+    
+        <label >Password :</label>
+        <input type="password" name="password" class="form-control"><br>
+    <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+{% endblock %}
+    
